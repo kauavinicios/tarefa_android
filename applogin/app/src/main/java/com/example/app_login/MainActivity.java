@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent i = new Intent(MainActivity.this, MainActivity2.class);
             i.putExtra("email_user", email);
             startActivity(i);
-
         }
     }
 }

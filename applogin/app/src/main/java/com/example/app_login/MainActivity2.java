@@ -1,23 +1,25 @@
 package com.example.app_login;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity2 extends AppCompatActivity {
-    SearchView searchView_;
+    android.widget.SearchView searchView_;
     ListView listView;
 
     ArrayList<String> arrayList = new ArrayList<>();
-
     ArrayList<String> arrayListCopia;
-
     ArrayAdapter<String> arrayAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +27,13 @@ public class MainActivity2 extends AppCompatActivity {
 
         searchView_ = findViewById(R.id.searchView);
         listView = findViewById(R.id.listView1);
+
         searchView_.setIconified(false);
 
-        for (int num = 0; num <= 5; num++){
+        arrayList.add("seleção de musicas");
+        for (int num = 1; num <= 6; num++){
             arrayList.add("Item "+ num);
-        }
+        };
 
         arrayListCopia = new ArrayList<>(arrayList);
 
@@ -38,9 +42,10 @@ public class MainActivity2 extends AppCompatActivity {
                 android.R.layout.simple_list_item_1,
                 arrayList
         );
+
         listView.setAdapter(arrayAdapter);
 
-        searchView_.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        searchView_.setOnQueryTextListener(new android.widget.SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
                 return false;
@@ -48,27 +53,41 @@ public class MainActivity2 extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String s) {
-                //forma 1
-                //MainActivity3.this.arrayAdapter.getFilter().filter(s);
-
-                //forma 2
                 fazerBusca(s);
                 arrayAdapter.notifyDataSetChanged();
                 return false;
             }
         });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(getApplicationContext(), "clicou" + i, Toast.LENGTH_SHORT).show();
+                itemSelecionado(i);
+            }
+        });
+
     }
 
     private void fazerBusca(String s) {
-
         arrayList.clear();
-
         s = s.toLowerCase();
 
         for(String item: arrayListCopia){
             if(item.toLowerCase().contains(s)){
                 arrayList.add(item);
             }
+        }
+    }
+
+    public void itemSelecionado(int itemClicado) {
+        switch (itemClicado) {
+            case 0:
+                Intent i = new Intent(MainActivity2.this, MainActivity3.class);
+                startActivity(i);
+                break;
+            default:
+                break;
         }
     }
 }
