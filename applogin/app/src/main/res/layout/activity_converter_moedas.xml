@@ -1,0 +1,142 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img1"
+    tools:context=".converterMoedas">
+
+
+    <EditText
+        android:id="@+id/ieneL"
+        android:layout_width="123dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="36dp"
+        android:inputType="text"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/euroL" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="116dp"
+        android:text="Euro"
+        app:layout_constraintEnd_toStartOf="@+id/euroL"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/paraguaioL"
+        android:layout_width="123dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="44dp"
+        android:inputType="text"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ieneL" />
+
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="140dp"
+        android:text="Limpar Campos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/realL" />
+
+    <EditText
+        android:id="@+id/euroL"
+        android:layout_width="123dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="40dp"
+        android:inputType="text"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dolarL" />
+
+    <EditText
+        android:id="@+id/dolarL"
+        android:layout_width="123dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="92dp"
+        android:inputType="text"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="48dp"
+        android:text="Peso Paraguaio"
+        app:layout_constraintEnd_toStartOf="@+id/paraguaioL"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="116dp"
+        android:text="Iene"
+        app:layout_constraintEnd_toStartOf="@+id/ieneL"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="44dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="96dp"
+        android:text="Real"
+        app:layout_constraintEnd_toStartOf="@+id/realL"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="116dp"
+        android:text="Dolar"
+        app:layout_constraintEnd_toStartOf="@+id/dolarL"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/realL"
+        android:layout_width="124dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="44dp"
+        android:inputType="text"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paraguaioL" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Conversor  2.0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

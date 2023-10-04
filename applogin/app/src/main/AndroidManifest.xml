@@ -13,16 +13,19 @@
         android:theme="@style/Theme.Applogin"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity4"
+            android:name=".converterMoedas"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".listaDeMusicas"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".menuDeGeneros"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".lista_menu"
+            android:exported="false" />
+        <activity
+            android:name=".inicio_loguin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

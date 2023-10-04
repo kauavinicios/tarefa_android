@@ -12,7 +12,7 @@ import android.widget.SearchView;
 
 import java.util.ArrayList;
 
-public class MainActivity4 extends AppCompatActivity {
+public class listaDeMusicas extends AppCompatActivity {
 
     SearchView searchView_;
     ListView listView;

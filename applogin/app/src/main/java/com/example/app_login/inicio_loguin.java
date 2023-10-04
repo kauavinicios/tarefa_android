@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class inicio_loguin extends AppCompatActivity implements View.OnClickListener {
 
     EditText emailT, senhaT;
     Button enviar;
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.e("senha: ", senha);
 
             Toast.makeText(getApplicationContext(), "Usuário Logado", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(MainActivity.this, MainActivity2.class);
+            Intent i = new Intent(inicio_loguin.this, lista_menu.class);
             i.putExtra("email_user", email);
             startActivity(i);
         }

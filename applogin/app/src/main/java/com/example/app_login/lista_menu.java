@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity2 extends AppCompatActivity {
+public class lista_menu extends AppCompatActivity {
     android.widget.SearchView searchView_;
     ListView listView;
 
@@ -31,7 +31,8 @@ public class MainActivity2 extends AppCompatActivity {
         searchView_.setIconified(false);
 
         arrayList.add("seleção de musicas");
-        for (int num = 1; num <= 6; num++){
+        arrayList.add("conversor de moedas");
+        for (int num = 2; num <= 6; num++){
             arrayList.add("Item "+ num);
         };
 
@@ -83,8 +84,12 @@ public class MainActivity2 extends AppCompatActivity {
     public void itemSelecionado(int itemClicado) {
         switch (itemClicado) {
             case 0:
-                Intent i = new Intent(MainActivity2.this, MainActivity3.class);
+                Intent i = new Intent(lista_menu.this, menuDeGeneros.class);
                 startActivity(i);
+                break;
+            case 1:
+                Intent ii = new Intent(lista_menu.this, converterMoedas.class);
+                startActivity(ii);
                 break;
             default:
                 break;

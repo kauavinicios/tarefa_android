@@ -13,7 +13,7 @@ import com.google.android.material.chip.ChipGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity3 extends AppCompatActivity {
+public class menuDeGeneros extends AppCompatActivity {
 
     Button enviar;
     ChipGroup genGrup;
@@ -37,7 +37,7 @@ public class MainActivity3 extends AppCompatActivity {
                 String estilo = chip.getText().toString();
                 arrayList.add(estilo);
             }
-            Intent intent = new Intent(MainActivity3.this, MainActivity4.class);
+            Intent intent = new Intent(menuDeGeneros.this, listaDeMusicas.class);
             intent.putExtra("selecionados", arrayList);
             startActivity(intent);
         });
